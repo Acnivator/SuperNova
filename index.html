@@ -4,10 +4,11 @@
 <head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="./TimeIncrement.js"></script>
+    <script src ="./extra.js"></script>
 </head>
 
 <body>
-    <a-scene background="color: #000000">
+    <a-scene background="color: #000000" >
 
         <!--Camera-->
         <a-entity position="0 0 15">
@@ -26,8 +27,8 @@
 
         <!--Sun-->
         <a-entity>
-            <a-sphere position="0 0 0" radius="2"
-                src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fsol.jpg?v=1604296185621"></a-sphere>
+            <a-sphere position="0 0 0" radius="2" id ="sun"
+                src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fsol.jpg?v=1604296185621" size></a-sphere>
         </a-entity>
 
         <!--Mercury-->
@@ -126,7 +127,7 @@
           <a-entity
             id="timer"
             position="15 10 0"
-            text="font: exo2bold; align: center; width: 30; color: white; value: 0000000000"
+            text="font: exo2bold; align: center; width: 30; color: white; value: 0000000000" 
           ></a-entity>
 
         </a-entity>
