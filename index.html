@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="./TimeIncrement.js"></script>
+    <script src ="./SunIncrement.js"></script>
+    <script src ="./Explosion.js"></script>
+    <script src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+
+</head>
+
+<body>
+    <a-scene background="color: #000000" visible = "true" id = "scene">
+
+        <!--Camera-->
+        <a-entity position="0 1 30">
+            <a-camera></a-camera>
+        </a-entity>
+
+        <a-entity
+            sound="src: https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Ffh_space_discovery_-_earth_proud_music_preview(1).mp3?v=1604306441093; autoplay: true; volume: 0.5">
+        </a-entity>
+
+
+        <!--Sky-->
+        <a-sky src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fvia_lactea.png?v=1604296331712" visible = "true" id = "sky">
+
+        </a-sky>
+
+    <a-entity visible = "true" id = "uni">
+        <!--Sun-->
+        <a-entity>
+            <a-sphere position="0 0 0" radius="2" id ="sun" visible="true"
+                src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fsol.jpg?v=1604296185621" size></a-sphere>
+        </a-entity>
+
+            <!--Mercury-->
+            <a-entity position="0 0 0" rotation="0 0 0"
+                animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 20000">
+                <a-sphere position="1  0 -5" radius="0.2"
+                    src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fmercurio.jpg?v=1604298142259">
+                </a-sphere>
+            </a-entity>
+
+            <!--Venus-->
+            <a-entity position="0 0 0" rotation="0 0 0"
+                animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 25000">
+                <a-sphere position="6  0 -5" radius="0.3"
+                    src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fvenus.jpg?v=1604312437571">
+                </a-sphere>
+            </a-entity>
+
+            <!--Earth-->
+            <a-entity position="0 0 0" rotation="0 0 0"
+                animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 10000">
+                <a-sphere position="10.5 0 0" radius="0.5"
+                    src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fearth.jpg?v=1604312404511">
+                    <!--Moon-->
+                <a-entity position="0 0 0" rotation="0 0 0"
+                animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 10000">
+                <a-sphere position="1 0 0" color="white" radius="0.05"></a-sphere>
+                </a-entity>
+                </a-sphere>
+            </a-entity>
+
+            <!--Mars-->
+            <a-entity position="0 0 0" rotation="0 0 0"
+                animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 20000">
+                <a-sphere position="21  0 -5" radius="0.4"
+                    src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fmercurio.jpg?v=1604298142259">
+                </a-sphere>
+            </a-entity>
+
+            <!--Jupiter-->
+            <a-entity position="0 0 0" rotation="0 0 0"
+                animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 40000">
+                <a-sphere position="21  0 -5" radius="1.2"
+                    src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fjupiter.jpg?v=1604312404561">
+                </a-sphere>
+            </a-entity>
+
+            <!--Saturn-->
+            <a-entity position="0 0 0" rotation="0 0 0"
+                animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 45000">
+                <a-sphere position="26 0 -5" radius="0.9"
+                    src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fsaturn.png?v=1604312433927">
+
+                    <!--Saturn Rings-->
+                <a-torus radius="2" radius-tubular="0.009" color="red" rotation="45 0 0" segments-tubular="1000"></a-torus>
+                <a-torus radius="2.3" radius-tubular="0.009" color="#1000020" rotation="45 0 0" segments-tubular="1000"></a-torus>
+                <a-torus radius="2.6" radius-tubular="0.009" color="brown" rotation="45 0 0" segments-tubular="1000"></a-torus>
+
+                </a-sphere>
+            </a-entity>
+
+            <!--Uranus-->
+            <a-entity position="0 0 0" rotation="0 0 0"
+                animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 50000">
+                <a-sphere position="31  0 -5" radius="0.6"
+                    src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fmercurio.jpg?v=1604298142259">
+                </a-sphere>
+            </a-entity>
+
+            <!--Neptune-->
+            <a-entity position="0 0 0" rotation="0 0 0"
+                animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 55000">
+                <a-sphere position="36  0 -5" radius="0.5"
+                    src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fmercurio.jpg?v=1604298142259">
+                </a-sphere>
+            </a-entity>
+
+            <!--Orbital Paths-->
+        <a-torus color="gray" radius="5" radius-tubular="0.01" rotation="90 0 0" segments-tubular="1000" ></a-torus>
+        <a-torus color="gray" radius="7.8" radius-tubular="0.01" rotation="90 0 0" segments-tubular="1000" ></a-torus>
+        <a-torus color="gray" radius="10.5" radius-tubular="0.01" rotation="90 0 0" segments-tubular="10000"></a-torus>
+        <a-torus color="gray" radius="14.5" radius-tubular="0.01" rotation="90 0 0" segments-tubular="10000"></a-torus>
+        <a-torus color="gray" radius="21.5" radius-tubular="0.01" rotation="90 0 0" segments-tubular="10000"></a-torus>
+        <a-torus color="gray" radius="26.5" radius-tubular="0.01" rotation="90 0 0" segments-tubular="10000"></a-torus>
+        <a-torus color="gray" radius="31.5" radius-tubular="0.01" rotation="90 0 0" segments-tubular="10000"></a-torus>
+        <a-torus color="gray" radius="36.5" radius-tubular="0.01" rotation="90 0 0" segments-tubular="10000"></a-torus>
+    </a-entity>
+
+        <!-- Timer -->
+        <a-entity position="0 0 0" id="mainTimer" timer>
+
+          <a-entity
+            position="25 20 0"
+            text="font: aileronsemibold; width: 50; color: white; value: TIME\n(IN YEARS))"
+          ></a-entity>
+
+          <a-entity
+            id="timer"
+            position="25 20 0"
+            text="font: exo2bold; align: center; width: 50; color: white; value: 0000000000" 
+          ></a-entity>
+
+        </a-entity>
+
+    <a-entity id="nova" visible="false" exp>
+        <!--Disc-->
+        <a-entity id="disc" position="0 0 0" rotation="90 0 0" spe-particles="        
+            color: white,orange,red,cyan,purple,black; 
+            distribution: disc; 
+            randomize-velocity: true;
+            radius: 8; 
+            particle-count: 100000; 
+            velocity: 4; 
+            velocity-spread: 75; 
+            drag: 1.2; 
+            max-age: 8;
+            duration: 3,
+            blending: additive;
+            active-multiplier: 10000;
+            size: 0.25, 0.25, 0.25, 0.25">
+        </a-entity>
+
+        <!--Sphere-->
+        <a-entity id="sphere" position="0 0 0 " spe-particles="        
+            color: white,yellow,orange,red,cyan,blue,pink,purple,black; 
+            distribution: sphere; 
+            randomize-velocity: true;
+            radius: 8; 
+            particle-count: 250000; 
+            velocity: 3; 
+            velocity-spread: 50; 
+            drag: 1; 
+            max-age: 8;
+            duration: 3,
+            blending: additive;
+            active-multiplier: 50000; 
+            size: 0.25, 0.25, 0.25, 0.25">
+        </a-entity>
+    </a-entity>
+
+    </a-scene>
+</body>
+
+</html>
